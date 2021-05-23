@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drawing App</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+         <div class="cursor"></div>
+        <!-- canvas id chaqirish kere -->
+        <canvas id="canvas" width="800" height="500"></canvas>
+        <div class="toolbox">
+          
+            <!-- decrease id chaqirish kere -->
+            <button id="decrease">-</button>
+
+            <!-- size id chaqirish kere -->
+            <span id="size">5</span>
+
+            <!-- increase id chaqirish kere -->
+            <button id="increase">+</button>
+
+            <!-- color id chaqirish kere -->
+            <input type="color" id="color" />
+            
+            <!-- clear id chaqirish kere -->
+            <button id="clear"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </body>
+</html>

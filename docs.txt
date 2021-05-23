@@ -1,0 +1,50 @@
+canvas ga addEventListener, mousedown, (e) =>
+
+canvas ga addEventListener, mousemove, (e) =>
+if blan tekshiramiz isPressed
+yengi ozgaruvchi ochvolamiz x2, y2 digan qiymatiga e.offsetX, e.offsetY beramiz
+drawCircle() f chaqiramiz argumentga x2, y2 beramiz
+drawLine() f chaqiramiz argumentga x, y, x2, y2 beramiz
+x ozgaruvchi qiymatiga x2
+y ozgaruvchi qiymatiga y2 beramiz
+
+drawCircle() f yasimiz parametrga x, y beramiz
+canvas ga chizamiz f ichida
+ctx beginPath() chizishi boshlash
+ctx arc(x, y, size, 0, Math.PI * 2) chizvotgan paytda dumalo qilib chizish uchun
+chizilgan dumaloni ichini toldiramiz ctx.fillStyle = color
+chizishi tugatish ctx.fill()
+
+drawLine f ochamiz parametrga x1, y1, x2, y2 beramiz
+ctx beginPath() chizishi boshlash
+ctx moveTo() ichiga x1, y1 parametrlani qoyamiz
+ctx lineTo() ichiga x2, y2 parametrlani qoyamiz
+ctx strokeStyle chizuni rangini beramiz color
+ctx lineWidth chizuni qalinligini beramiz size * 2
+ctx stroke() qilib chizishi tugatish
+
+canvas addEventListener, mouseup canvas dan chiqib ketish yani mishkani qoyvorish
+event ushavolamiz
+isPressed ni false qilamiz yani chiqib ketgandan keyin chizib bomidigan qilamiz
+x, y ni undefined qilamiz
+
+increaseBtn addEventListener, click 
+size ga 5 qoshamiz
+if agar dimiz size kota bosa 50 dan size ni 50 ga teng qilamiz
+
+
+
+decreaseBtn addEventListener, click
+size dan 5 ayramiz
+if agar dimiz size kichkina 5 dan size ni 5 ga teng qilamiz
+
+colorEl addEventListener, change event ushavolamiz
+color qiymatiga event target value qilamiz
+
+
+clearEl addEventListener, click
+ctx tozalimiz clearRect(0, 0, canvas.width, canvas.height)
+
+
+updateSizeOnScreen f yasimiz 
+sizeEl innerText size beramiz
